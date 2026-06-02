@@ -206,12 +206,16 @@ export function TopNav() {
                   href={link.href}
                   onClick={() => setIsMenuOpen(false)}
                   className={`text-[28px] sm:text-[34px] font-display tracking-[0.05em] transition-colors uppercase border-b border-white/5 pb-2 flex items-center justify-between group ${
-                    isActive
-                      ? "text-primary-light font-normal"
-                      : "text-on-dark hover:text-primary-light font-light"
+                    isActive ? "font-normal" : "font-light"
                   }`}
                 >
-                  <span>{link.label}</span>
+                  <span className={
+                    isActive
+                      ? "text-primary-light"
+                      : "text-on-dark group-hover:text-primary-light transition-colors"
+                  }>
+                    {link.label}
+                  </span>
                   {isActive && (
                     <span className="w-1.5 h-1.5 bg-primary-light rounded-full" />
                   )}
