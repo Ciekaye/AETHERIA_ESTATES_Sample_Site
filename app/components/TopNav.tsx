@@ -58,7 +58,7 @@ export function TopNav() {
         ref={root}
         className="sticky top-0 z-50 bg-canvas border-b border-hairline backdrop-blur-md bg-opacity-95"
       >
-        <div className="mx-auto grid grid-cols-2 lg:grid-cols-3 h-16 max-w-[1440px] items-center px-6 lg:px-10">
+        <div className="mx-auto grid grid-cols-[1fr_auto] lg:grid-cols-[1fr_auto_1fr] h-16 max-w-[1440px] items-center px-6 lg:px-10">
           {/* Logo (Left Column) */}
           <div className="flex items-center justify-start">
             <Link
@@ -76,7 +76,7 @@ export function TopNav() {
           </div>
 
           {/* Centered Navigation Menu (Center Column) */}
-          <nav className="hidden lg:flex items-center justify-center gap-8">
+          <nav className="hidden lg:flex items-center justify-center lg:gap-5 xl:gap-8">
             {navLinks.map((link) => {
               const isActive =
                 pathname === link.href ||
@@ -101,7 +101,7 @@ export function TopNav() {
           </nav>
 
           {/* Action Buttons (Right Column) */}
-          <div className="flex items-center justify-end gap-6">
+          <div className="flex items-center justify-end lg:gap-4 xl:gap-6 gap-6">
             <Link
               href="/portfolios"
               className="nav-item hidden md:inline-flex h-9 items-center justify-center border border-primary px-5 text-[12px] uppercase font-bold tracking-[0.15em] text-ink hover:bg-primary hover:text-white transition-all duration-300"
