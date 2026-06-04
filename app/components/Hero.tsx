@@ -197,7 +197,7 @@ export function Hero() {
       </div>
 
       {/* DYNAMIC FILMSTRIP CONTROLLER (Bespoke Filmstrip Nav) */}
-      <div className="relative lg:absolute right-6 bottom-8 lg:right-10 lg:bottom-10 z-30 flex flex-col items-start lg:items-center gap-3 mt-8 lg:mt-0 px-6 lg:px-5 lg:py-4 lg:bg-canvas/75 lg:backdrop-blur-md lg:border lg:border-white/20 lg:shadow-2xl">
+      <div className="relative lg:absolute lg:right-10 lg:bottom-10 z-30 flex flex-col items-start lg:items-center gap-3 mt-8 lg:mt-0 px-6 lg:px-5 lg:py-4 lg:bg-canvas/75 lg:backdrop-blur-md lg:border lg:border-white/20 lg:shadow-2xl">
         <p className="text-[9px] uppercase font-bold tracking-[0.25em] text-muted lg:text-ink/80 text-left lg:text-center mb-1 w-full">
           Select Sanctuary Portfolio
         </p>
