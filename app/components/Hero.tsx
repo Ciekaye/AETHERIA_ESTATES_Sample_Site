@@ -197,8 +197,8 @@ export function Hero() {
       </div>
 
       {/* DYNAMIC FILMSTRIP CONTROLLER (Bespoke Filmstrip Nav) */}
-      <div className="relative lg:absolute right-6 bottom-8 z-30 flex flex-col gap-3 mt-8 lg:mt-0 px-6 lg:px-0">
-        <p className="hidden lg:block text-[8px] uppercase font-bold tracking-[0.25em] text-white/50 text-right mb-1">
+      <div className="relative lg:absolute right-6 bottom-8 lg:right-10 lg:bottom-10 z-30 flex flex-col items-start lg:items-end gap-3 mt-8 lg:mt-0 px-6 lg:px-4 lg:py-4 lg:bg-canvas/75 lg:backdrop-blur-md lg:border lg:border-white/20 lg:shadow-2xl">
+        <p className="text-[9px] uppercase font-bold tracking-[0.25em] text-muted lg:text-ink/80 lg:text-right mb-1">
           Select Sanctuary Portfolio
         </p>
         <div className="flex lg:flex-col gap-3">
@@ -208,13 +208,15 @@ export function Hero() {
               onClick={() => handleTransition(idx)}
               className="filmstrip-card relative w-16 h-12 lg:w-20 lg:h-14 border overflow-hidden cursor-pointer transition-all duration-300 ease-out group"
               style={{
-                borderColor: activeIndex === idx ? "#4169e1" : "rgba(255,255,255,0.2)"
+                borderColor: activeIndex === idx ? "var(--color-primary)" : "var(--color-hairline-strong)"
               }}
             >
               <img
                 src={estate.image}
                 alt={estate.name}
-                className="w-full h-full object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-300"
+                className={`w-full h-full object-cover transition-all duration-300 ${
+                  activeIndex === idx ? "grayscale-0" : "grayscale contrast-125 group-hover:grayscale-0"
+                }`}
               />
               <div className={`absolute inset-0 bg-primary/20 transition-opacity duration-300 ${activeIndex === idx ? "opacity-100" : "opacity-0"}`} />
             </button>
